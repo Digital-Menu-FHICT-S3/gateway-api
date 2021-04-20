@@ -11,6 +11,10 @@ spring:
           uri: lb://ORDER-SERVICE
           predicates:
             - Path=/orders/**
+        - id: MENU-SERVICE
+          uri: lb://MENU-SERVICE
+          predicates:
+            - Path=/menu/**
 
 eureka:
   client:
