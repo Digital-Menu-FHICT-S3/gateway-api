@@ -15,6 +15,12 @@ spring:
           uri: lb://MENU-SERVICE
           predicates:
             - Path=/menu/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
 
 eureka:
   client:
