@@ -15,6 +15,14 @@ spring:
           uri: lb://MENU-SERVICE
           predicates:
             - Path=/menu/**
+        - id: INGREDIENTS-SERVICE
+          uri: lb://INGREDIENTS-SERVICE
+          predicates:
+            - Path=/ingredient/**
+        - id: STOCK-SERVICE
+          uri: lb://STOCK-SERVICE
+          predicates:
+            - Path=/stock/**
       globalcors:
         corsConfigurations:
           '[/**]':
